@@ -53,6 +53,7 @@ python -m tevatron.utils.format.convert_result_to_trec \
               --input ${encoded_folder[$i]}/character_bert_st_dltypo_typo_rank.txt \
               --output ${encoded_folder[$i]}/character_bert_st_dltypo_typo_rank.txt.trec
 
-
+#trec_eval
+trec_eval -l 2 -m ndcg_cut.10 -m map -m recip_rank data/dl-typo/qrels.txt ${encoded_folder[$i]}/character_bert_st_dltypo_typo_rank.txt.trec
 done
 
