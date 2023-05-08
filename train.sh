@@ -1,5 +1,6 @@
 #!/bin/bash
 trained_folder=("model_msmarco_characterbert_st_3" "model_msmarco_characterbert_st_4" "model_msmarco_characterbert_st_5" "model_msmarco_characterbert_st_6" "model_msmarco_characterbert_st_7" "model_msmarco_characterbert_st_8")
+training_rate=(5e-3 5e-4 5e-5 5e-6 5e-7 5e-8)
 
 for name in ${trained_folder[@]}; do
 mkdir $name
@@ -15,7 +16,7 @@ python -m tevatron.driver.train \
 --dataset_name Tevatron/msmarco-passage \
 --fp16 \
 --per_device_train_batch_size 4 \
---learning_rate 5e-3 \
+--learning_rate ${training_rate[$i]} \
 --max_steps 3000 \
 --dataloader_num_workers 10 \
 --cache_dir ./cache \
