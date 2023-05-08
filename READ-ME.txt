@@ -6,6 +6,7 @@ pip install transformers==4.9.2
 pip install datasets==1.11.0
 pip install textattack==0.3.4
 pip install tensorflow_text
+pip install nvidia-pyindex
 
 To simply run the trec_evaluation, run the following file
 ./eval.sh
