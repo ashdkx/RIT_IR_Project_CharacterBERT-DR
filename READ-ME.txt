@@ -1,0 +1,15 @@
+In order to run the files, please run the following commands:
+pip install --editable .
+pip install torch==1.8.1
+pip install faiss-cpu==1.7.1
+pip install transformers==4.9.2
+pip install datasets==1.11.0
+pip install textattack==0.3.4
+pip install tensorflow_text
+
+To simply run the trec_evaluation, run the following file
+./eval.sh
+
+If you wish to create the models and encodings yourself, run the following commands:
+./train.sh
+./encode_n_eval.sh
