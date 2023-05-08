@@ -8,9 +8,12 @@ pip install textattack==0.3.4
 pip install tensorflow_text
 pip install nvidia-pyindex
 
-To simply run the trec_evaluation, run the following file
+NOTE: due to file size, original encodings are not provided, only resulting trec_files
+
+To simply run the trec_evaluation and see the results, run the following file
 ./eval.sh
 
-If you wish to create the models and encodings yourself, run the following commands:
+If you wish to create the models, encodings, and evaluation yourself, run the following commands:
+NOTE: this will take ~3 days, not recommended
 ./train.sh
 ./encode_n_eval.sh
