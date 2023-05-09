@@ -1,4 +1,5 @@
 #!/bin/bash
+#used to create the DR models used for experiment
 trained_folder=("model_msmarco_characterbert_st_3" "model_msmarco_characterbert_st_4" "model_msmarco_characterbert_st_5" "model_msmarco_characterbert_st_6" "model_msmarco_characterbert_st_7" "model_msmarco_characterbert_st_8")
 training_rate=(5e-3 5e-4 5e-5 5e-6 5e-7 5e-8)
 
@@ -15,9 +16,9 @@ python -m tevatron.driver.train \
 --save_steps 40000 \
 --dataset_name Tevatron/msmarco-passage \
 --fp16 \
---per_device_train_batch_size 4 \
+--per_device_train_batch_size 4 \ #NOTE: reduced from 16 to 4 be able to run on ICL6 machine
 --learning_rate ${training_rate[$i]} \
---max_steps 3000 \
+--max_steps 3000 \ #NOTE: reduced from 150,000 to 3,000 in order to run in reasonable time 
 --dataloader_num_workers 10 \
 --cache_dir ./cache \
 --logging_steps 150 \
