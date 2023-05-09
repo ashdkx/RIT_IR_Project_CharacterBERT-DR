@@ -24,3 +24,4 @@ python -m tevatron.driver.train \
 --logging_steps 150 \
 --character_query_encoder True \
 --self_teaching True
+done
