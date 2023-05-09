@@ -1,3 +1,5 @@
+NOTE: DR models and encodings not included due to size limitations, trec files are included 
+
 In order to run the files, please run the following commands:
 pip install --editable .
 pip install torch==1.8.1
