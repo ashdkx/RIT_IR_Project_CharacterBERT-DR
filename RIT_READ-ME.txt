@@ -10,7 +10,7 @@ pip install nvidia-pyindex
 
 NOTE: due to file size, original encodings are not provided, only resulting trec_files
 
-To simply run the trec_evaluation and see the results, run the following file
+To run the trec_evaluation and see the results, run the following file
 ./eval.sh
 
 If you wish to create the models, encodings, and evaluation yourself, run the following commands:
