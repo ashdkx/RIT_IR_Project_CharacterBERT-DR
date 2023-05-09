@@ -11,7 +11,7 @@ for i in ${!trained_folder[@]}; do
 python -m tevatron.driver.train \
 --model_name_or_path bert-base-uncased \
 --character_bert_path ./general_character_bert \
---output_dir trained_folder \
+--output_dir ${trained_folder[$i]} \
 --passage_field_separator [SEP] \
 --save_steps 40000 \
 --dataset_name Tevatron/msmarco-passage \
